@@ -46,7 +46,18 @@ for(var i = 0; i < cart.length; i++) {
 }
 
 function total() {
-  // write your code here
+var arr = [];
+var newArr = [];
+var tempArr = [];
+var reducer = (accumulator, currentValue) => accumulator + currentValue;
+  for(var i = 0; i < cart.length; i++) {
+    newArr.push(Object.values(cart[i]));
+  }
+  for(var j = 0; j < newArr.length; j++) {
+    tempArr = newArr[j];
+    arr = arr.concat(tempArr);
+  }
+   return arr.reduce(reducer);
 }
 
 function removeFromCart(item) {
