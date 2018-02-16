@@ -71,7 +71,7 @@ for(var i = 0; i < cart.length; i++){
 
 
 function placeOrder(cardNumber) {
-  if(cardNumber !== null) {
+  if(cardNumber !== undefined) {
     console.log(`Your total cost is , which will be charged to the card ${cardNumber}.`);
     cart = [];
   } else {
